@@ -17,13 +17,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 7rem;
+  padding-top: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
 }
 
 .register-form {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .m-t2 {
@@ -32,12 +32,12 @@ body {
 
 .input-field {
   width: 100%;
-  height: 60px;
+  height: 50px;
   font-family: "Poppins", sans-serif;
   outline: none;
   border: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: .8rem;
   background-color: #212325;
   border-radius: 9px;
   padding-left: 1rem;
@@ -45,12 +45,12 @@ body {
 
 .login-button {
   width: 100%;
-  height: 70px;
+  height: 50px;
   font-family: "Poppins", sans-serif;
   outline: none;
   border: none;
   cursor: pointer;
-  margin-top: 4rem;
+  margin-top: 3rem;
   color: #fff;
   font-size: 1rem;
   background-color: #000;
@@ -83,16 +83,16 @@ body {
 .label-form {
   margin-bottom: 1rem;
   display: block;
-  font-size: 1.2rem;
+  font-size: .8rem;
 }
 
 .login-form > h1 {
-  font-size: 3.8rem;
+  font-size: 2.8rem;
   text-align: center;
 }
 
 .login-form > p {
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -166,6 +166,7 @@ td {
   border-radius: 5px;
   height: 40px;
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
 }
 
 .delete {
@@ -203,15 +204,17 @@ td {
 .news-section {
   background-color: #434a5a88;
   width: 100%;
-  height: 500px;
+  height: 550px;
   border-radius: 5px;
   padding: 1rem;
+  font-weight: 600;
+  font-size: large;
 }
 
 .plot-section {
   background-color: #434a5a88;
   width: 100%;
-  height: 500px;
+  height: 550px;
   border-radius: 5px;
   padding: 1rem;
   position: relative;
@@ -265,6 +268,7 @@ td {
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .loader {
@@ -286,7 +290,7 @@ td {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 95%;
+  height: 100%;
 }
 
 .plus-button {
@@ -333,4 +337,8 @@ td {
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+}
+.p-title{
+  display: flex;
+  justify-content: center;
 }

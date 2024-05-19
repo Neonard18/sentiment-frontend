@@ -89,7 +89,7 @@ function Login(props) {
               getToken({username, password})
             }}>Login</button>
         </div>
-        <span style={spanStyle}>Already have an account <button className="register" 
+        <span style={spanStyle}>Don't have an account yet? <button className="register" 
           onClick={() => {
             navigate("/register")
           }}>Click Here</button></span>

@@ -1,5 +1,6 @@
 import React, {useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import UnauthUser from '../src/img/user-icon.png'
 
 
 function App(props) {
@@ -12,10 +13,9 @@ function App(props) {
   const [symbol, setSymbol] = useState()
 
 
-  useEffect(() => {getUser()},
-  [])
-  useEffect(() => {getWatchList()},
-  [watchList])
+  useEffect(() => {getUser()}, [])
+
+  useEffect(() => {getWatchList()},[watchList])
 
   const popupForm = document.getElementById('popupForm')
   const symb = document.getElementById('symb')
@@ -101,7 +101,7 @@ function App(props) {
           title: `${symbol.toUpperCase()} have been created.`,
           icon: 'success',
           showConfirmButton: false,
-          timer: 1500
+          timer: 1850
         })
       }   
     }catch (error) {
@@ -124,7 +124,7 @@ function App(props) {
 
   const spanStyle = {
     display: 'block',
-    margin: '6px',
+    margin: '8px',
   }
   
   if (!props.token.token) window.location.href = '/'
@@ -143,15 +143,20 @@ function App(props) {
         </div>
 
         <div className="user">
-          <img src="" alt="" className="image-user" />
+          <img src={UnauthUser} alt="" className="image-user" />
           <div className="user-flex">
             <h1>{user && user.email}</h1>
           </div>
         </div>
       </div>
 
+
       <div className="dash-place">
         <div className="dash-board">
+          <div>
+          <h1 className="p-title">Sentiment Analysis of Stock News</h1>
+          <p>This project utilizes the SentimentIntensityAnalyzer to analyze sentiment in stock news articles. The SentimentIntensityAnalyzer assigns sentiment scores ranging from -1 (extremely negative) to 1 (extremely positive) to each news article. These scores are then plotted on a graph using Matplotlib. This graphical representation allows for easy visualization of the overall sentiment trends in the stock market, aiding investors in making informed decisions based on sentiment analysis of news coverage.</p>
+          </div>
           <table className="dash-table">
             <thead>
               <tr>
@@ -164,7 +169,7 @@ function App(props) {
             </thead>
             <tbody>
             {
-              Array.isArray(watchList)? 
+              (Array.isArray(watchList) || watchList.lentgh < 1)? 
               (watchList.map((item, index) => (
                   <tr key={index}>
                     <td>{item.symbol ?? 'N/A'}</td>
